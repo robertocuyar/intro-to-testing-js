@@ -4,5 +4,9 @@ function helloWorld() {
 }
 // sayHello function
 function sayHello(name) {
-    return "Hello, " + name + "!";
+   if (name && name !== true && isNaN(name) === true && typeof name ==='string') {
+       return "Hello, " + name + "!"
+   } else {
+       return "Hello, World!"
+   }
 }

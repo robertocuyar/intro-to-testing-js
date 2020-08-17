@@ -30,6 +30,28 @@ describe('sayHello', function() {
     it("should return 'Hello, Pat!' with an input of 'Pat'", function(){
         expect(sayHello('Pat')).toBe('Hello, Pat!');
     });
-
-
+    it("should return 'Hello, World!' with an undefined input", function(){
+        expect(sayHello()).toBe("Hello, World!");
+    });
+    it("should return 'Hello, World! with an input of true", function(){
+        expect(sayHello(true)).toBe("Hello, World!");
+    });
+    it("should return 'Hello, World! with an input of false", function(){
+        expect(sayHello(false)).toBe("Hello, World!");
+    });
+    it("should return 'Hello, World! with an input of null", function(){
+        expect(sayHello(null)).toBe("Hello, World!");
+    });
+    it("should return 'Hello, World! with an input of \"\"", function(){
+        expect(sayHello("")).toBe("Hello, World!");
+    });
+    it("should return 'Hello, World! with an input of 2.3", function() {
+        expect(sayHello(2.3)).toBe("Hello, World!");
+    });
+    it("should return 'Hello, World! with an input of '5'", function() {
+        expect(sayHello("5")).toBe("Hello, World!");
+    });
+    it("should return 'Hello, World! with an input that is an array, object or function", function() {
+        expect(sayHello([1, 2, 3])).toBe("Hello, World!");
+    });
 });
